@@ -55,7 +55,7 @@ func (c categoryRepo) UpdateCategory(cat models.Category) error {
 
 func (c categoryRepo) DeleteCategory(id uuid.UUID) error {
 
-	if _, err := c.DB.Exec("delete from products where category_id = $1", id); err != nil {
+	if _, err := c.DB.Exec(`delete from products where category_id = $1`, id); err != nil {
 		return err
 	}
 
