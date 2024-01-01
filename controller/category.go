@@ -55,7 +55,7 @@ func (c Controller) DeleteCategory() {
 		fmt.Println("error while deleting ", err.Error())
 		return
 	}
-	fmt.Println("deleted category with this id :",idstr)
+	fmt.Println("deleted category with this id :", idstr)
 }
 
 /////////////////////////////////////////////////
@@ -124,6 +124,7 @@ a:
 	} else if cmd == 1 {
 
 		fmt.Println("enter name : ")
+		fmt.Scan(&name)
 	} else {
 		fmt.Println("not found ")
 		goto a
